@@ -1,0 +1,22 @@
+{
+  "name": "ecommerce-platform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "auth": "cd services/auth-service && nodemon server.js",
+    "product": "cd services/product-service && nodemon server.js",
+    "cart": "cd services/cart-service && nodemon server.js",
+    "order": "cd services/order-service && nodemon server.js",
+    "gateway": "cd gateway && nodemon server.js",
+    "dev": "concurrently \"npm run auth\" \"npm run product\" \"npm run cart\" \"npm run order\" \"npm run gateway\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "dotenv": "^17.4.2",
+    "nodemon": "^3.1.14"
+  }
+}
